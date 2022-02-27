@@ -9,6 +9,9 @@
 <!-- sidebar menu  -->
 <script src="<?php echo e(asset('admins/js/metisMenu.js')); ?>"></script>
 
+
+<script src="https://unpkg.com/filepond@^4/dist/filepond.js"></script
+
 <!-- waypoints js -->
 <script src="<?php echo e(asset('admins/vendors/count_up/jquery.waypoints.min.js')); ?>"></script>
 <!-- waypoints js -->
@@ -41,21 +44,18 @@
 <!-- tag input -->
 <script src="<?php echo e(asset('admins/vendors/tagsinput/tagsinput.js')); ?>"></script>
 
-<!-- text editor js -->
-<script src="<?php echo e(asset('admins/vendors/text_editor/summernote-bs4.js')); ?>"></script>
 
-<script src="<?php echo e(asset('admins/vendors/apex_chart/apexcharts.js')); ?>"></script>
+
+<!-- text editor js -->
+
 
 <!-- custom js -->
 <script src="<?php echo e(asset('admins/js/custom.js')); ?>"></script>
 
 <!-- active_chart js -->
 <script src="<?php echo e(asset('admins/js/active_chart2.js')); ?>"></script>
-<script src="<?php echo e(asset('admins/vendors/apex_chart/radial_active_min.js')); ?>"></script>
-<script src="<?php echo e(asset('admins/vendors/apex_chart/stackbar2.js')); ?>"></script>
-<script src="<?php echo e(asset('admins/vendors/apex_chart/area_chart.js')); ?>"></script>
-<script src="<?php echo e(asset('admins/vendors/apex_chart/pie.js')); ?>"></script>
-<script src="<?php echo e(asset('admins/vendors/apex_chart/bar_active_2.js')); ?>"></script>
-<script src="<?php echo e(asset('admins/vendors/chartjs/chartjs_active2.js')); ?>"></script>
+
+
+
 <script src="<?php echo e(asset('js/app.js')); ?>"></script>
 <?php /**PATH C:\xampp\htdocs\freeze\breeze\resources\views/components/partials/admin_footer.blade.php ENDPATH**/ ?>

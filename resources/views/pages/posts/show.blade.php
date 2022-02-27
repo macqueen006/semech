@@ -2,7 +2,7 @@
     @section('title', "Blog: $post->title")
     @section('keywords')
         @foreach($post->tags() as $tag)
-            {{ $tag->name }} ,
+            {{ $tag->name }}
         @endforeach
     @endsection
 
@@ -67,7 +67,7 @@
                                     <!-- Start Content -->
                                     <div class="content basic-dark2-line-1px pb--50 mb--35">
                                         <div class="inner">
-                                            {{ $post->body }}
+                                            {!! $post->body !!}
                                         </div>
                                     </div>
 
@@ -91,7 +91,7 @@
                                 <!-- Start Post Nav Links -->
                                 <div class="post-nav-lisnt mb--45 wow move-up">
                                     <div class="nav-item previous">
-                                        <a href="blog-details.html#">
+                                        <a href="#">
                                             <div class="link-text">
                                                 <span class="fa fa-arrow-left"></span>
                                                 <p class="">Prev</p>
@@ -100,7 +100,7 @@
                                         </a>
                                     </div>
                                     <div class="nav-item next mt_sm--30">
-                                        <a href="blog-details.html#">
+                                        <a href="#">
                                             <div class="link-text">
                                                 <p class="">Next</p>
                                                 <span class="fa fa-arrow-right"></span>
@@ -111,7 +111,6 @@
                                 </div>
                                 <!-- End Post Nav Links -->
                                 @comments(['model' => $post])
-
 
                             </div>
                         </div>

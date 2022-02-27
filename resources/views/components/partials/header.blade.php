@@ -18,14 +18,17 @@
 <meta name="twitter:title" content="@yield('title')">
 
 
-<title>@yield('title', 'Semechsystems')</title>
+<title>@yield('title', 'SIS')</title>
 
 <!-- Fonts -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
 
 
-<link rel="shortcut icon" href="{{ asset('img/favicon.ico') }}">
-<link rel="apple-touch-icon" href="{{ asset('img/icon.png') }}">
+<link rel="shortcut icon" href="{{ asset('img/logo/fav.png') }}">
+<link rel="apple-touch-icon" href="{{ asset('img/logo/fav.png') }}">
+
+<!-- font awesome -->
+<link rel="stylesheet" href="{{ asset('fontawesome/css/all.min.css') }}">
 
 <link rel="stylesheet" href="{{ asset('styles/css/bootstrap.min.css') }}">
 <link rel="stylesheet" href="{{ asset('styles/css/revoulation.css') }}">

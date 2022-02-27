@@ -19,6 +19,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="row">
                     <div class="col-12">
                         <div class="row poss_relative">
@@ -27,10 +28,10 @@
                                 <div class="icon-box text-center no-border">
                                     <div class="inner">
                                         <div class="icon">
-                                            <img src="{{ asset('img/architecture/icon8.png') }}" alt="icon">
+                                            <img src="{{ asset('img/icons/solution.png') }}" width="100" alt="icon">
                                         </div>
                                         <div class="content">
-                                            <h5 class="heading heading-h5">Planning</h5>
+                                            <h5 class="heading heading-h5">Digital business solution</h5>
                                             <p class="bk_pra">Brook embraces a modern look with various enhanced
                                                 pre-defined page elements.</p>
                                         </div>
@@ -44,10 +45,10 @@
                                 <div class="icon-box text-center no-border">
                                     <div class="inner">
                                         <div class="icon">
-                                            <img src="{{ asset('img/architecture/icon9.png') }}" alt="icon">
+                                            <img src="{{ asset('img/icons/data-analysis.png') }}" width="100" alt="icon">
                                         </div>
                                         <div class="content">
-                                            <h5 class="heading heading-h5">Interior</h5>
+                                            <h5 class="heading heading-h5">Research</h5>
                                             <p class="bk_pra">We successfully implemented numerous UI/UX projects
                                                 for both global & local clients.</p>
                                         </div>
@@ -61,10 +62,10 @@
                                 <div class="icon-box text-center no-border">
                                     <div class="inner">
                                         <div class="icon">
-                                            <img src="{{ asset('img/architecture/icon10.png') }}" alt="icon">
+                                            <img src="{{ asset('img/icons/prototype.png') }}" width="100" alt="icon">
                                         </div>
                                         <div class="content">
-                                            <h5 class="heading heading-h5">Exterior</h5>
+                                            <h5 class="heading heading-h5">Proto Typing</h5>
                                             <p class="bk_pra">Brook is highly responsive thanks to built-in
                                                 WP Bakery Page Builder & Slider Revolution.</p>
                                         </div>
@@ -78,10 +79,10 @@
                                 <div class="icon-box text-center no-border">
                                     <div class="inner">
                                         <div class="icon">
-                                            <img src="{{ asset('img/architecture/icon11.png') }}" alt="icon">
+                                            <img src="{{ asset('img/icons/home-automation.png') }}" width="100" alt="icon">
                                         </div>
                                         <div class="content">
-                                            <h5 class="heading heading-h5">Decoration</h5>
+                                            <h5 class="heading heading-h5">Home Automation</h5>
                                             <p class="bk_pra">We participate in knowledge and technology transfers
                                                 in resource use.</p>
                                         </div>
@@ -95,10 +96,10 @@
                                 <div class="icon-box text-center no-border">
                                     <div class="inner">
                                         <div class="icon">
-                                            <img src="{{ asset('img/architecture/icon12.png') }}" alt="icon">
+                                            <img src="{{ asset('img/icons/green-energy.png') }}" width="100" alt="icon">
                                         </div>
                                         <div class="content">
-                                            <h5 class="heading heading-h5">Furniture</h5>
+                                            <h5 class="heading heading-h5">Alternative Energy Solutions</h5>
                                             <p class="bk_pra">We participate in knowledge and technology transfers
                                                 in resource use.</p>
                                         </div>
@@ -112,10 +113,10 @@
                                 <div class="icon-box text-center no-border">
                                     <div class="inner">
                                         <div class="icon">
-                                            <img src="{{ asset('img/architecture/icon13.png') }}" alt="icon">
+                                            <img src="{{ asset('img/icons/architect.png') }}" width="100" alt="icon">
                                         </div>
                                         <div class="content">
-                                            <h5 class="heading heading-h5">Exclusively</h5>
+                                            <h5 class="heading heading-h5">Engineering Project Management</h5>
                                             <p class="bk_pra">Brook is highly responsive thanks to built-in
                                                 WP Bakery Page Builder & Slider Revolution.</p>
                                         </div>
@@ -123,223 +124,12 @@
                                 </div>
                             </div>
                             <!-- End Single Icon Boxes -->
-
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <!-- End Icon Boxes -->
-
-        <x-layouts.ourwork />
-
-        <div class="brook-pricing-table-area ptb--150 ptb-md--80 ptb-sm--60 bg_color--5">
-            <div class="container">
-                <div class="row">
-
-                    <!-- Start Single Pricing Table -->
-                    <div class="col-lg-4 col-md-6 col-sm-12 col-12">
-                        <div class="procing-wrap pt--40 move-up wow">
-                            <div class="procing-box">
-                                <div class="header">
-                                    <div class="price">
-                                        <h3 class="currenct">$</h3>
-                                        <h3 class="heading headin-h3">46</h3>
-                                    </div>
-                                </div>
-                                <div class="content">
-                                    <h5 class="heading heading-h5">Basic package</h5>
-                                    <!-- Start Single List -->
-                                    <div class="bk-list--2">
-                                        <div class="list-header with-ckeck item-available">
-                                            <div class="marker"></div>
-                                            <div class="title-wrap">
-                                                <h6 class="heading heading-h5">Business Architecture</h6>
-                                            </div>
-                                        </div>
-                                        <div class="list-header with-ckeck item-available">
-                                            <div class="marker"></div>
-                                            <div class="title-wrap">
-                                                <h6 class="heading heading-h5">Cognitive Architecture</h6>
-                                            </div>
-                                        </div>
-
-                                        <div class="list-header with-ckeck item-available">
-                                            <div class="marker"></div>
-                                            <div class="title-wrap">
-                                                <h6 class="heading heading-h5">Interior Architecture</h6>
-                                            </div>
-                                        </div>
-
-                                        <div class="list-header with-ckeck item-not-available">
-                                            <div class="marker"></div>
-                                            <div class="title-wrap">
-                                                <h6 class="heading heading-h5">Landscape Architecture</h6>
-                                            </div>
-                                        </div>
-
-                                        <div class="list-header with-ckeck item-not-available">
-                                            <div class="marker"></div>
-                                            <div class="title-wrap">
-                                                <h6 class="heading heading-h5">UI/UX designs</h6>
-                                            </div>
-                                        </div>
-
-                                        <div class="list-header with-ckeck item-not-available">
-                                            <div class="marker"></div>
-                                            <div class="title-wrap">
-                                                <h6 class="heading heading-h5">SEO marketing</h6>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <!-- End Single List -->
-                                </div>
-                                <div class="footer mt--40">
-                                    <a class="brook-btn bk-btn-dark btn-sd-size btn-rounded" href="service.html#">Sign up</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Single Pricing Table -->
-
-                    <!-- Start Single Pricing Table -->
-                    <div class="col-lg-4 col-md-6 col-sm-12 col-12 mt_sm--40">
-                        <div class="procing-wrap move-up wow" data-wow-delay="0.16s">
-                            <div class="procing-box active">
-                                <div class="header">
-                                    <div class="feature-mark">Popular Choice</div>
-                                    <div class="price">
-                                        <h3 class="currenct">$</h3>
-                                        <h3 class="heading headin-h3">46</h3>
-                                    </div>
-                                </div>
-                                <div class="content">
-                                    <h5 class="heading heading-h5">Basic package</h5>
-                                    <!-- Start Single List -->
-                                    <div class="bk-list--2">
-                                        <div class="list-header with-ckeck item-available">
-                                            <div class="marker"></div>
-                                            <div class="title-wrap">
-                                                <h6 class="heading heading-h5">Business Architecture</h6>
-                                            </div>
-                                        </div>
-                                        <div class="list-header with-ckeck item-available">
-                                            <div class="marker"></div>
-                                            <div class="title-wrap">
-                                                <h6 class="heading heading-h5">Cognitive Architecture</h6>
-                                            </div>
-                                        </div>
-
-                                        <div class="list-header with-ckeck item-available">
-                                            <div class="marker"></div>
-                                            <div class="title-wrap">
-                                                <h6 class="heading heading-h5">Interior Architecture</h6>
-                                            </div>
-                                        </div>
-
-                                        <div class="list-header with-ckeck item-available">
-                                            <div class="marker"></div>
-                                            <div class="title-wrap">
-                                                <h6 class="heading heading-h5">Landscape Architecture</h6>
-                                            </div>
-                                        </div>
-
-                                        <div class="list-header with-ckeck item-available">
-                                            <div class="marker"></div>
-                                            <div class="title-wrap">
-                                                <h6 class="heading heading-h5">UI/UX designs</h6>
-                                            </div>
-                                        </div>
-
-                                        <div class="list-header with-ckeck item-not-available">
-                                            <div class="marker"></div>
-                                            <div class="title-wrap">
-                                                <h6 class="heading heading-h5">SEO marketing</h6>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <!-- End Single List -->
-                                </div>
-                                <div class="footer mt--40">
-                                    <a class="brook-btn bk-btn-dark btn-sd-size btn-rounded" href="service.html#">Sign up</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Single Pricing Table -->
-
-                    <!-- Start Single Pricing Table -->
-                    <div class="col-lg-4 col-md-6 col-sm-12 col-12">
-                        <div class="procing-wrap pt--40 move-up wow" data-wow-delay="0.19s">
-                            <div class="procing-box">
-                                <div class="header">
-                                    <div class="price">
-                                        <h3 class="currenct">$</h3>
-                                        <h3 class="heading headin-h3">248</h3>
-                                    </div>
-                                </div>
-                                <div class="content">
-                                    <h5 class="heading heading-h5">Premium package</h5>
-                                    <!-- Start Single List -->
-                                    <div class="bk-list--2">
-                                        <div class="list-header with-ckeck item-available">
-                                            <div class="marker"></div>
-                                            <div class="title-wrap">
-                                                <h6 class="heading heading-h5">Business Architecture</h6>
-                                            </div>
-                                        </div>
-                                        <div class="list-header with-ckeck item-available">
-                                            <div class="marker"></div>
-                                            <div class="title-wrap">
-                                                <h6 class="heading heading-h5">Cognitive Architecture</h6>
-                                            </div>
-                                        </div>
-
-                                        <div class="list-header with-ckeck item-available">
-                                            <div class="marker"></div>
-                                            <div class="title-wrap">
-                                                <h6 class="heading heading-h5">Interior Architecture</h6>
-                                            </div>
-                                        </div>
-
-                                        <div class="list-header with-ckeck item-available">
-                                            <div class="marker"></div>
-                                            <div class="title-wrap">
-                                                <h6 class="heading heading-h5">Landscape Architecture</h6>
-                                            </div>
-                                        </div>
-
-                                        <div class="list-header with-ckeck item-available">
-                                            <div class="marker"></div>
-                                            <div class="title-wrap">
-                                                <h6 class="heading heading-h5">UI/UX designs</h6>
-                                            </div>
-                                        </div>
-
-                                        <div class="list-header with-ckeck item-available">
-                                            <div class="marker"></div>
-                                            <div class="title-wrap">
-                                                <h6 class="heading heading-h5">SEO marketing</h6>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <!-- End Single List -->
-                                </div>
-
-                                <div class="footer mt--40">
-                                    <a class="brook-btn bk-btn-dark btn-sd-size btn-rounded" href="service.html#">Sign up</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Single Pricing Table -->
-
-                </div>
-            </div>
-        </div>
 
         <!-- Start Gradation Area -->
         <div class="brook-gradation-area ptb--120 ptb-md--80 ptb-sm--60 bg_color--1">

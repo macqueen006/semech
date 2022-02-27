@@ -3,13 +3,11 @@
 
     @foreach($posts as $post)
         <x-post.latest :post="$post"/>
-@endforeach
+    @endforeach
 
 <!-- End Single Blog -->
     <div class="brook-btn mt-sm-5 text-center">
-
         <!-- This is from the paginator class-->
-
         @if($posts->hasMorePages())
             <button wire:click="loadMore" class="brook-btn bk-btn-dark btn-sd-size mt-10 btn-rounded space-between">
                 Load More

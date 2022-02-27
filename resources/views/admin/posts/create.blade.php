@@ -1,5 +1,6 @@
 @push('styles')
-    <link rel="stylesheet" href="{{ asset('admins/css/chosen.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('admins/css/choices.css') }}">
+    <link rel="stylesheet" href="{{ asset('admins/css/pickaday.css') }}">
 @endpush
 
 <x-admin-layout>
@@ -24,7 +25,8 @@
                         <div class="white_box mb_30">
                             <div class="form-group input_wrap mb_20">
                                 <label for="image" class="text-xs">COVER IMAGE</label>
-                                <input type="file" class="mb-2" name="image" value="{{ old('image') }}" id="image" required><br>
+                                <input type="file" class="mb-2" name="image" value="{{ old('image') }}" id="image"
+                                       required><br>
                                 @error('image')
                                 <span class="pl-1 text-danger">{{ $message }}</span>
                                 @enderror
@@ -32,89 +34,152 @@
 
                             <div class="form-group mb_20">
                                 <label for="name">Title</label>
-                                <input type="text" class="form-control mb-2" name="title" id="title" placeholder="Title" value="{{ old('title') }}" autocomplete="off">
+                                <input type="text" class="form-control mb-2" name="title" id="title" placeholder="Title"
+                                       value="{{ old('title') }}" autocomplete="off">
                                 @error('title')
                                 <span class="pl-1 text-danger">{{ $message }}</span>
                                 @enderror
                             </div>
 
+
                             <div class="form-group mb_20">
-                                <label for="body">content</label>
-                                <textarea id="summernote" name="body">{{ old('body') }}</textarea>
+                                <label for="name">Content</label>
+                                <textarea id="open-source-plugins" name="body">{{ old('body') }}</textarea>
                                 @error('body')
                                 <span class="pl-1 text-danger">{{ $message }}</span>
                                 @enderror
                             </div>
 
-{{--                            <div class="input_wrap mb_20">--}}
-{{--                                <label for="name">Tags</label>--}}
-{{--                                <input type="text" value=""--}}
-{{--                                       data-role="tagsinput" name="tags" id="tagsInputField"/>--}}
-{{--                            </div>--}}
 
-                            <div class="form-group mb_20">
-                                <label for="body">Published At</label>
-                                <input type="date" id="published_at" value="{{ old('published_at') }}" name="published_at" /><br>
-                                @error('published_at')
-                                <span class="pl-1 text-danger">{{ $message }}</span>
-                                @enderror
-                            </div>
-
-                            <div class="form-group mb_20">
-                                <label for="name">Type</label>
-                                <select class="" name="type" id="type">
-                                        <option value="standard">Standard</option>
-                                        <option value="premium">Premium</option>
-                                </select>
-                            </div>
-
-                            <div class="form-group mb_20">
-                                <label for="tags">Tags</label>
-                                <select class="my_select_box chosen-select form-control" name="tags[]" id="tags" multiple>
-                                    @foreach($tags as $tag)
-                                        <option value="{{ $tag->id }}">{{ $tag->name }}</option>
-                                    @endforeach
-                                </select>
-                            </div>
-
-                            <div class="form-group mb_20">
-                                <label for="photo_credit_text">Photo Credit Text</label>
-                                <input type="text" class="form-control mb-2" name="photo_credit_text" id="photo_credit_text" placeholder="photo credit text" value="{{ old('photo_credit_text') }}" autocomplete="off">
-                            </div>
-
-                            <div class="form-group mb_20">
-                                <label for="photo_credit_link">Photo Credit Link</label>
-                                <input type="text" class="form-control mb-2" name="photo_credit_link" id="photo_credit_link" placeholder="photo credit link" value="{{ old('photo_credit_link') }}" autocomplete="off">
-                            </div>
-
-
-                                <div class="form-group cs_check_box">
-                                    <input type="checkbox" id="check_box" value="1" name="is_commentable" class="common_checkbox">
-                                    <label for="check_box">
-                                       Allow Comments
-                                    </label>
-                                </div>
-
+                        <div class="form-group mb_20">
+                            <label for="body">Published At</label><br>
+                            <input type="text" id="datepicker" name="published_at"
+                                   value="{{ old('published_at') }}" placeholder="YYYY MM DD" autocomplete="off">
+                            @error('published_at')
+                            <span class="pl-1 text-danger">{{ $message }}</span>
+                            @enderror
                         </div>
 
-                        <button type="submit" class="btn btn-primary">
-                            Create
-                        </button>
+                        <div class="form-group mb_20">
+                            <label for="name">Type</label><br>
+                            <select class="" name="type" id="type">
+                                <option value="standard">Standard</option>
+                                <option value="premium">Premium</option>
+                            </select>
+                        </div>
 
-                    </form>
+                        <div class="form-group mb_20">
+                            <label for="tags">Tags</label>
+                            <select class="" name="tags[]" id="tags" multiple x-data="{}" x-init="function() {
+                                choices($el) }">
+                                @foreach($tags as $tag)
+                                    <option value="{{ $tag->id }}">{{ $tag->name }}</option>
+                                @endforeach
+                            </select>
+                        </div>
+
+                        <div class="form-group mb_20">
+                            <label for="photo_credit_text">Photo Credit Text</label>
+                            <input type="text" class="form-control mb-2" name="photo_credit_text"
+                                   id="photo_credit_text" placeholder="photo credit text"
+                                   value="{{ old('photo_credit_text') }}" autocomplete="off">
+                        </div>
+
+                        <div class="form-group mb_20">
+                            <label for="photo_credit_link">Photo Credit Link</label>
+                            <input type="text" class="form-control mb-2" name="photo_credit_link"
+                                   id="photo_credit_link" placeholder="photo credit link"
+                                   value="{{ old('photo_credit_link') }}" autocomplete="off">
+                        </div>
+
+
+                        <div class="form-group cs_check_box">
+                            <input type="checkbox" id="check_box" value="1" name="is_commentable"
+                                   class="common_checkbox">
+                            <label for="check_box">
+                                Allow Comments
+                            </label>
+                        </div>
 
                 </div>
+
+                <button type="submit" class="btn btn-primary">
+                    Create
+                </button>
+
+                </form>
+
             </div>
         </div>
+    </div>
 
-        @push('scripts')
-            <script src="{{ asset('admins/js/chosen.jquery.min.js') }}"></script>
-            <script>
-                $(function () {
-                    $(".my_select_box").chosen('chosen:updated');
+    @push('scripts')
+        <script src="{{ asset('admins/js/pickaday.js') }}"></script>
+        <script>
+            //pick a day
+            let picker = new Pikaday(
+                {
+                    field: document.getElementById('datepicker'),
+                    format: 'D MMM YYYY',
                 });
-                // $('.my_select_box').trigger('chosen:updated');
+        </script>
+
+        <script src="{{ asset('admins/js/tinymce/tinymce.min.js') }}"></script>
+            <script>
+                var useDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+                var editor_config = {
+                    path_absolute : "/",
+                    selector: 'textarea#open-source-plugins',
+                    relative_urls: false,
+                    plugins: 'print preview paste importcss searchreplace autolink autosave save directionality code visualblocks visualchars fullscreen image link media template codesample table charmap hr pagebreak nonbreaking anchor toc insertdatetime advlist lists wordcount imagetools textpattern noneditable help charmap emoticons',
+                    imagetools_cors_hosts: ['picsum.photos'],
+                    toolbar: 'undo redo | bold italic underline strikethrough | fontselect fontsizeselect formatselect | alignleft aligncenter alignright alignjustify | outdent indent |  numlist bullist | forecolor backcolor removeformat | pagebreak | charmap emoticons | fullscreen  preview save print | insertfile image media template link anchor codesample | ltr rtl',
+                    toolbar_sticky: true,
+                    template_cdate_format: '[Date Created (CDATE): %m/%d/%Y : %H:%M:%S]',
+                    template_mdate_format: '[Date Modified (MDATE): %m/%d/%Y : %H:%M:%S]',
+                    height: 500,
+                    image_caption: true,
+                    quickbars_selection_toolbar: 'bold italic | quicklink h2 h3 blockquote quickimage quicktable',
+                    noneditable_noneditable_class: 'mceNonEditable',
+                    toolbar_mode: 'sliding',
+                    contextmenu: 'link image imagetools table',
+                    skin: useDarkMode ? 'oxide-dark' : 'oxide',
+                    content_css: useDarkMode ? 'dark' : 'default',
+                    content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }',
+                    image_title: true,
+                    automatic_uploads: true,
+
+                    file_picker_callback : function(callback, value, meta) {
+                        var x = window.innerWidth || document.documentElement.clientWidth || document.getElementsByTagName('body')[0].clientWidth;
+                        var y = window.innerHeight|| document.documentElement.clientHeight|| document.getElementsByTagName('body')[0].clientHeight;
+
+                        var cmsURL = editor_config.path_absolute + 'laravel-filemanager?editor=' + meta.fieldname;
+                        if (meta.filetype === 'image') {
+                            cmsURL = cmsURL + "&type=Images";
+                        } else {
+                            cmsURL = cmsURL + "&type=Files";
+                        }
+
+                        tinyMCE.activeEditor.windowManager.openUrl({
+                            url : cmsURL,
+                            title : 'Filemanager',
+                            width : x * 0.8,
+                            height : y * 0.8,
+                            resizable : "yes",
+                            close_previous : "no",
+                            onMessage: (api, message) => {
+                                callback(message.content);
+                            }
+                        });
+                    }
+                };
+
+                tinymce.init(editor_config);
+
             </script>
+
+
     @endpush
 </x-admin-layout>
 

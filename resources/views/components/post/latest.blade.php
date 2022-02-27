@@ -16,7 +16,7 @@
                 </div>
 
                 <div class="desc pl_md--20 pl_sm--10 mt--20">
-                    <p class="bk_pra">{{ $post->excerpt() }}</p>
+                    <p class="bk_pra">{!! $post->excerpt() !!} </p>
                 </div>
             </div>
         </div>

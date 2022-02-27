@@ -1,4 +1,5 @@
 <!-- Blog Area -->
+
 <div class="bk-blog-grid-area bg_color--1 pb--120 pb_md--80 pb_sm--60">
     <div class="container">
         <div class="row">
@@ -10,68 +11,30 @@
             </div>
         </div>
         <div class="row mt--20">
+            @foreach($posts as $post)
             <!-- Start Single Blog -->
             <div class="col-lg-4 col-md-6 col-sm-6 col-12 move-up wow mt--40">
                 <div class="blog-grid blog-standard grid-simple">
                     <div class="post-thumb">
                         <a href="">
-                            <img src="{{ asset('img/architecture/blog1.jpg') }}" alt="image">
+                            <img src="{{ asset('storage/'.$post->image) }}" alt="news image">
                         </a>
                     </div>
                     <div class="post-content text-center">
                         <div class="post-inner">
                             <div class="post-meta">
-                                <div class="post-date">May 21, 2018</div>
-                                <div class="post-category"><a href="#">Architecture</a></div>
+                                <div class="post-date">{{ $post->created_at->format('M d, Y') }}</div>
+                                @foreach($post->tags() as $tag)
+                                <div class="post-category"><a href="{{ route('tags.show', $tag) }}">{{ $tag->name }}</a></div>
+                                @endforeach
                             </div>
-                            <h5 class="heading heading-h5"><a href="">No architecture is so haughty as that which is simple.</a></h5>
+                            <h5 class="heading heading-h5"><a href="{{ route('blog.show', $post) }}">{!! clean($post->excerpt(40) ) !!} </a></h5>
                         </div>
                     </div>
                 </div>
             </div>
             <!-- End Single Blog -->
-
-            <!-- Start Single Blog -->
-            <div class="col-lg-4 col-md-6 col-sm-6 col-12 move-up wow mt--40">
-                <div class="blog-grid blog-standard grid-simple">
-                    <div class="post-thumb">
-                        <a href="">
-                            <img src="{{ asset('img/architecture/blog2.jpg') }}" alt="image">
-                        </a>
-                    </div>
-                    <div class="post-content text-center">
-                        <div class="post-inner">
-                            <div class="post-meta">
-                                <div class="post-date">May 21, 2018</div>
-                                <div class="post-category"><a href="#">Architecture</a></div>
-                            </div>
-                            <h5 class="heading heading-h5"><a href="">A building has integrity just like a man. And just as seldom.</a></h5>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- End Single Blog -->
-
-            <!-- Start Single Blog -->
-            <div class="col-lg-4 col-md-6 col-sm-6 col-12 move-up wow mt--40">
-                <div class="blog-grid blog-standard grid-simple">
-                    <div class="post-thumb">
-                        <a href="">
-                            <img src="{{ asset('img/architecture/blog3.jpg') }}" alt="Multipurpose template">
-                        </a>
-                    </div>
-                    <div class="post-content text-center">
-                        <div class="post-inner">
-                            <div class="post-meta">
-                                <div class="post-date">May 21, 2018</div>
-                                <div class="post-category"><a href="#">Architecture</a></div>
-                            </div>
-                            <h5 class="heading heading-h5"><a href="">Whatever good things we build end up building us.</a></h5>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- End Single Blog -->
+                @endforeach
         </div>
     </div>
 </div>

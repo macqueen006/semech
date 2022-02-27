@@ -44,15 +44,7 @@
                         <i class="ti-menu"></i>
                     </div>
                     <div class="serach_field-area">
-                        <div class="search_inner">
-                            <form action="#">
-                                <div class="search_field">
-                                    <input type="text" placeholder="Search here...">
-                                </div>
-                                <button type="submit"><img src="<?php echo e(asset('admins/img/icon/icon_search.svg')); ?>" alt="">
-                                </button>
-                            </form>
-                        </div>
+                        <!-- add other content here -->
                     </div>
                     <div class="header_right d-flex justify-content-between align-items-center">
                         <div class="header_notification_warp d-flex align-items-center">
@@ -110,6 +102,7 @@
 
 </section>
 
+<?php echo $__env->make('sweetalert::alert', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 <?php echo \Livewire\Livewire::scripts(); ?>
 
 <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
@@ -126,7 +119,6 @@
 <?php endif; ?>
 <?php echo $__env->yieldPushContent('scripts'); ?>
 
-<?php echo $__env->make('sweetalert::alert', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 </body>
 </html>
 <?php /**PATH C:\xampp\htdocs\freeze\breeze\resources\views/layouts/admin/app.blade.php ENDPATH**/ ?>

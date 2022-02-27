@@ -82,7 +82,7 @@ class PostController extends Controller
     public function edit(Post $post)
     {
         $tags =Tag::all();
-        $selectedTags = old('tags', $tags->pluck('id')->toArray());
+        $selectedTags = old('tags', $post->tags()->pluck('id')->toArray());
         return view('admin.posts.edit', compact('post', 'tags', 'selectedTags'));
     }
 
@@ -97,7 +97,7 @@ class PostController extends Controller
     public function update(PostRequest $request, Post $post)
     {
         $this->dispatchSync(UpdatePost::formRequest($post, $request));
-        toast('Post created','Updated');
+        toast('Post updated','success');
         return redirect()->route('admin.posts.index');
     }
 

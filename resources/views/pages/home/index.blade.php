@@ -9,7 +9,7 @@
                     <!-- Hero Info -->
                     <div class="shop-slide-inner shop-slide-info">
                         <div class="inner">
-                            <h1 class="heading heading-h1 font-90 fw-400 text-black-50 line-height-1-42">The Luxury Residence. </h1>
+                            <h1 class="heading heading-h1 font-90 fw-400 text-black-50 line-height-1-42">Data People Technology </h1>
 
                             <div class="shop-btn mt--45">
                                 <a class="brook-btn bk-btn-dark btn-sd-size btn-rounded space-between" href="{{ route('service') }}">Our Services</a>
@@ -209,7 +209,9 @@
 
             <x-layouts.team />
 
-            <x-layouts.news />
+            @if($posts === 3)
+            <x-layouts.news :posts="$posts" />
+            @endif
 
             <x-layouts.block />
 

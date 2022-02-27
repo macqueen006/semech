@@ -46,7 +46,7 @@
                                 <?php $__currentLoopData = $posts; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $post): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                 <tr>
                                     <td> <a href="#"><?php echo e($post->title); ?></a></td>
-                                    <td><?php echo e($post->excerpt(50)); ?></td>
+                                    <td><?php echo $post->excerpt(50); ?></td>
                                     <td><?php echo e($post->author()->name); ?></td>
                                     <td><?php echo e($post->created_at); ?></td>
                                     <td><?php echo e($post->published_at); ?></td>
@@ -67,7 +67,6 @@
                                 </tbody>
                             </table>
                         </div>
-
 
                     </div>
                 </div>

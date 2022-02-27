@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Storage;
 
 /*
 |--------------------------------------------------------------------------
@@ -44,6 +45,13 @@ Route::group([
     //Tags
     Route::get('tags/{tag}', [\App\Http\Controllers\Pages\TagController::class, 'show'])->name('tags.show');
 
+     //TinyMce Route
+//    Route::post('/upload', [\App\Http\Controllers\Pages\PostController::class, 'upload']);
+
+});
+
+Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']], function () {
+    \UniSharp\LaravelFilemanager\Lfm::routes();
 });
 
 require __DIR__.'/auth.php';

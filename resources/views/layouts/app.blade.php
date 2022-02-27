@@ -47,6 +47,8 @@
 <script src="{{ asset('scripts/js/revolution.extension.min.js') }}"></script>
 <script src="{{ asset('scripts/js/main.js') }}"></script>
 <script src="{{ asset('scripts/js/revoulation.js') }}"></script>
+<!-- font awesome -->
+<script src="{{ asset('fontawesome/js/all.min.js') }}"></script>
 <script src="{{ asset('js/app.js') }}"></script>
 
 </body>

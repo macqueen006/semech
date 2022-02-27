@@ -12,7 +12,9 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
+use Tonysm\RichTextLaravel\Models\RichText;
 
 class CreatePost implements ShouldQueue
 {
@@ -84,7 +86,7 @@ class CreatePost implements ShouldQueue
     public
     function handle(): Post
     {
-        $post = new Post([
+        $post = Post::create([
             'title'             => $this->title,
             'slug'              => Str::slug($this->title),
             'body'              => $this->body,
@@ -93,9 +95,12 @@ class CreatePost implements ShouldQueue
             'photo_credit_link' => $this->photoCreditLink,
             'is_commentable'    => $this->isCommentAble ? false : true,
         ]);
+
         $post->authoredBy($this->author);
         $post->syncTags($this->tags);
         SaveImageService::uploadImage($this->image, $post, Post::TABLE);
+
+
         return $post;
     }
 }

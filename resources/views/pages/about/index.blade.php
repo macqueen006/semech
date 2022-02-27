@@ -219,7 +219,6 @@
 
       <x-layouts.testimonial />
 
-       <x-layouts.news />
 
         <x-layouts.block />
     </main>

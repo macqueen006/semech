@@ -4,7 +4,7 @@
         <x-slot name="image">
             {{ asset('img/bg/bg-image-136.jpg') }}
         </x-slot>
-        <x-slot name="title">Our Blog</x-slot>
+        <x-slot name="title"></x-slot>
     </x-layouts.hero>
 
     <!-- Page Content -->

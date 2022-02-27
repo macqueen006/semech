@@ -23,4 +23,10 @@ class PostController extends Controller
         return view('pages.posts.show', compact('post', 'request', 'tags'));
     }
 
+    public function upload(Request $request)
+    {
+        $imgPath = $request->file('file')->store('uploads', 'public');
+        return response()->json(['location' => '/storage/public/' . $imgPath]);
+    }
+
 }

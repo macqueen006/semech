@@ -1,11 +1,11 @@
 (function ($) {
     "use strict";
-    //progressbar js
-    // $(document).ready(function(){
-    //     $('#bar4').barfiller({ barColor: '#900', duration: 3000 });
-    // });
-    
-    
+    // progressbar js
+    $(document).ready(function(){
+        $('#bar4').barfiller({ barColor: '#900', duration: 3000 });
+    });
+
+
     //notification section js
     $(".close_icon").click(function () {
       $(this).parents(".hide_content").slideToggle("0");
@@ -24,9 +24,9 @@
     }
 
 
-    // data table 
+    // data table
 
-    
+
     //niceselect select jquery
     $('.nice_Select').niceSelect();
     //niceselect select jquery
@@ -62,29 +62,30 @@
     $('.sidebar_close_icon i').on('click', function(){
         $('.sidebar').removeClass('active_sidebar');
     });
-    
+
     //active menu
     $('.troggle_icon').on('click', function(){
         $('.setting_navbar_bar').toggleClass('active_menu');
     });
 
     //active courses option
-    // $('.courses_option').on('click', function(){
-    //     $(this).parent(".custom_select").toggleClass('active');
-    // });
+    $('.courses_option').on('click', function(){
+        $(this).parent(".custom_select").toggleClass('active');
+    });
 
     $('.custom_select').click( function(){
         if ( $(this).hasClass('active') ) {
             $(this).removeClass('active');
         } else {
             $('.custom_select.active').removeClass('active');
-            $(this).addClass('active');    
+            $(this).addClass('active');
         }
     });
-//     $( 'ul.nav li' ).on( 'click', function() {
-//         $( this ).parent().find( 'li.active' ).removeClass( 'active' );
-//         $( this ).addClass( 'active' );
-//   });
+
+    $( 'ul.nav li' ).on( 'click', function() {
+        $( this ).parent().find( 'li.active' ).removeClass( 'active' );
+        $( this ).addClass( 'active' );
+  });
 
     $(document).click(function(event){
         if (!$(event.target).closest(".custom_select").length) {
@@ -97,44 +98,44 @@
             $("body").find(".sidebar").removeClass("active_sidebar");
         }
     });
-    
+
     // check all
     $("#checkAll").click(function () {
         $('input:checkbox').not(this).prop('checked', this.checked);
     });
 
-    // sumer note
-    $('#summernote').summernote({
-        placeholder: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-        tabsize: 2,
-        height: 195
-    });
+    // summernote
+    // $('#summernote').summernote({
+    //     placeholder: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+    //     tabsize: 2,
+    //     height: 195
+    // });
+    //
+    // $('.lms_summernote').summernote({
+    //     placeholder: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+    //     tabsize: 2,
+    //     height: 188
+    // });
 
-    $('.lms_summernote').summernote({
-        placeholder: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-        tabsize: 2,
-        height: 188
-    });
-    
     //custom file
     $('.input-file').each(function() {
         var $input = $(this),
             $label = $input.next('.js-labelFile'),
             labelVal = $label.html();
-        
+
        $input.on('change', function(element) {
           var fileName = '';
           if (element.target.value) fileName = element.target.value.split('\\').pop();
           fileName ? $label.addClass('has-file').find('.js-fileName').html(fileName) : $label.removeClass('has-file').html(labelVal);
        });
     });
-    
+
     //custom file
     $('.input-file2').each(function() {
         var $input = $(this),
             $label = $input.next('.js-labelFile1'),
             labelVal = $label.html();
-        
+
        $input.on('change', function(element) {
           var fileName = '';
           if (element.target.value) fileName = element.target.value.split('\\').pop();
@@ -191,18 +192,18 @@
         $(this).removeClass('layout_style_selected');
     } else {
         $('.layout_style.layout_style_selected').removeClass('layout_style_selected');
-        $(this).addClass('layout_style_selected');    
+        $(this).addClass('layout_style_selected');
     }
 });
 
-// metisMenu 
+// metisMenu
 $("#sidebar_menu").metisMenu();
 
-// metisMenu 
+// metisMenu
 $("#admin_profile_active").metisMenu();
 
-// switcher menu 
-// anly for side switcher menu 
+// switcher menu
+// anly for side switcher menu
 $('.switcher_wrap li.Horizontal').click( function(){
     $('.sidebar').addClass('hide_vertical_menu');
     $('.main_content ').addClass('main_content_padding_hide');
@@ -219,8 +220,8 @@ $('.switcher_wrap li.vertical').click( function(){
     $('.footer_part').removeClass('pl-0');
 });
 
-// switcher_wrap 
-// anly for side switcher menu 
+// switcher_wrap
+// anly for side switcher menu
 
 $('.switcher_wrap li').click(function(){
     $('li').removeClass("active");
@@ -234,11 +235,11 @@ $('.custom_lms_choose li').click(function(){
 
 
 $('.spin_icon_clicker').on('click', function(e) {
-    $('.switcher_slide_wrapper').toggleClass("swith_show"); //you can list several class names 
+    $('.switcher_slide_wrapper').toggleClass("swith_show"); //you can list several class names
     e.preventDefault();
   });
 
-//   color skin 
+//   color skin
   $(document).ready(function(){
     $(function () {
         "use strict";
@@ -247,6 +248,6 @@ $('.spin_icon_clicker').on('click', function(e) {
           $(".pCard_add i").toggleClass("fa-minus");
         });
       });
-    }); 
+    });
 
 }(jQuery));

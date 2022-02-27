@@ -43,4 +43,6 @@ Route::group([
     // tags
     Route::resource('admin/tags', TagController::class);
 
+    Route::post('/upload', [PostController::class, 'store']);
+
 });

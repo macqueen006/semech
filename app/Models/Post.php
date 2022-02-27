@@ -12,6 +12,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
 use Laravelista\Comments\Commentable;
+use Tonysm\RichTextLaravel\Models\Traits\HasRichText;
 
 class Post extends Model
 {
@@ -20,11 +21,17 @@ class Post extends Model
     use HasTags;
     use Commentable;
     use Search;
+//    use HasRichText;
 
     protected $searchable = [
         'title',
         'slug',
     ];
+
+    protected $richTextFields = [
+        'body',
+    ];
+
 
     const TABLE = 'posts';
 
@@ -46,7 +53,7 @@ class Post extends Model
     //for Eager loading
     protected $with = [
         'authorRelation',
-        'tagsRelation'
+        'tagsRelation',
     ];
 
     //cast to a carbon instance once we retrieve the data
@@ -57,9 +64,9 @@ class Post extends Model
     ];
 
 
-    public function excerpt(int $limit = 250): string
+    public function excerpt(int $limit = 250): ?string
     {
-        return Str::limit(strip_tags($this->body), $limit);
+        return Str::limit($this->body, $limit);
     }
 
     public function image()

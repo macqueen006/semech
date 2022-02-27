@@ -6,6 +6,7 @@
 <!-- <link rel="icon" href="img/favicon.png" type="image/png"> -->
 <!-- Bootstrap CSS -->
 <?php echo $__env->yieldPushContent('styles'); ?>
+<link href="https://unpkg.com/filepond@^4/dist/filepond.css" rel="stylesheet" />
 
 <link rel="stylesheet" href="<?php echo e(asset('admins/css/bootstrap.min.css')); ?>" />
 <!-- themefy CSS -->
@@ -28,7 +29,8 @@
 <link rel="stylesheet" href="<?php echo e(asset('admins/vendors/datatable/css/responsive.dataTables.min.css')); ?>" />
 <link rel="stylesheet" href="<?php echo e(asset('admins/vendors/datatable/css/buttons.dataTables.min.css')); ?>" />
 <!-- text editor css -->
-<link rel="stylesheet" href="<?php echo e(asset('admins/vendors/text_editor/summernote-bs4.css')); ?>" />
+
+
 <!-- morris css -->
 <link rel="stylesheet" href="<?php echo e(asset('admins/vendors/morris/morris.css')); ?>">
 <!-- metarial icon css -->

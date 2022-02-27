@@ -222,6 +222,14 @@
             </div>
         </div>
     <!-- main content part end -->
+    <?php $__env->startPush('scripts'); ?>
+        <script src="<?php echo e(asset('admins/vendors/apex_chart/apexcharts.js')); ?>"></script>
+        <script src="<?php echo e(asset('admins/vendors/apex_chart/radial_active_min.js')); ?>"></script>
+        <script src="<?php echo e(asset('admins/vendors/apex_chart/stackbar2.js')); ?>"></script>
+        <script src="<?php echo e(asset('admins/vendors/apex_chart/area_chart.js')); ?>"></script>
+        <script src="<?php echo e(asset('admins/vendors/apex_chart/bar_active_2.js')); ?>"></script>
+        <script src="<?php echo e(asset('admins/vendors/chartjs/chartjs_active2.js')); ?>"></script>
+    <?php $__env->stopPush(); ?>
 
  <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>

@@ -52,8 +52,12 @@
                                         @endif
                                         <td>{{ $user->joinedDate() }}</td>
                                         <td>
-                                            <a href="" class="paginate_button bg-gray-100">Ban</a>,
-                                            <a href="" class="paginate_button bg-gray-100">Delete</a>
+                                            <a href="{{ route('admin.users.edit', $user) }}" class="paginate_button bg-gray-100">Edit</a>,
+                                            <form action="{{ route('admin.users.destroy', $user ) }}" method="post">
+                                                @method('DELETE')
+                                                @csrf
+                                                <input type="submit" value="Delete">
+                                            </form>
                                         </td>
                                     </tr>
                                 @endforeach

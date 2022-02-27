@@ -41,7 +41,7 @@
                                 @foreach($posts as $post)
                                 <tr>
                                     <td> <a href="#">{{ $post->title }}</a></td>
-                                    <td>{{ $post->excerpt(50) }}</td>
+                                    <td>{!! $post->excerpt(50) !!}</td>
                                     <td>{{ $post->author()->name }}</td>
                                     <td>{{ $post->created_at }}</td>
                                     <td>{{ $post->published_at }}</td>
@@ -61,7 +61,6 @@
                                 </tbody>
                             </table>
                         </div>
-
 
                     </div>
                 </div>

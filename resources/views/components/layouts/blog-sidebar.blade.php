@@ -21,7 +21,7 @@
             <div class="bl-sidebar banner mt--50 wow move-up">
                 <div class="inner">
                     <div class="thumb">
-                        <img class="w-100" src="../../img/blog/big-img/banner-image.jpg" alt="banner">
+                        <img class="w-100" src="{{ asset('img/blog/big-img/banner-image.jpg') }}" alt="banner">
                     </div>
                     <div class="content">
                         <h4 class="heading heading-h4 text-white">Spot for banner</h4>
